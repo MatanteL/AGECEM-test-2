@@ -1,0 +1,90 @@
+name: Événement
+description: Pour organisation d'événement.
+title: "[DATE]: [NOM DE L'ÉVÉNEMENT]"
+projects: ["Tâches"]
+body:
+  - type: input
+    id: nom
+    attributes:
+      label: Nom de l'événement
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Date de tenue de l'événement
+      placeholder: ex. AAAA-MM-JJ HH:MM - AAAA-MM-JJ HH:MM
+    validations:
+      required: true
+
+  - type: input
+    id: lieu
+    attributes:
+      label: Lieu de tenue de l'événement
+    validations:
+      required: true
+
+  - type: input
+    id: personnes-ressource
+    attributes:
+      label: Personnes Ressource
+    validations:
+      required: true
+  
+  - type: checkboxes
+    id: participant-e-s
+    attributes:
+      label: Qui participe?
+      options:
+        - label: Étudiant·e·s
+        - label: Membres des organismes
+        - label: Conseil Administratif des organismes
+        - label: Délégué·e·s du CÉ
+        - label: Exécutant·e·s
+        - label: Employé·e·s de l'AGECEM
+        - label: Autre
+
+  - type: checkboxes
+    id: departement
+    attributes:
+      label: Département scolaire
+      options:
+        - label: Nom complet
+        - label: Code étudiant
+        - label: Rôle
+        - label: Périodes de présence
+        - label: Restrictions alimentaires
+        - label: Conditions médicales
+
+  - type: textarea
+    id: activites
+    attributes:
+      label: Activités prévues
+      placeholder: Activité - Description, Lieu, Heure et durée prévue
+
+  - type: textarea
+    id: materiel-prep
+    attributes:
+      label: Matériel à préparer
+    validations:
+      required: true
+
+  - type: textarea
+    id: materiel-louer
+    attributes:
+      label: Matériel à louer
+      description: Le matériel suivant peut être loué par Dédé - Projecteur et écran de projection, système de son avec micros, système d'éclairage, télévisions, etc
+
+  - type: textarea
+    id: materiel-achat
+    attributes:
+      label: Matériel à acheter
+
+  - type: checkboxes
+    id: taches
+    attributes:
+      label: Tâches à réaliser
+      options:
+        - label: Demande de réservation du lieu
+        - label: Produire et envoyer le formulaire d'inscription
