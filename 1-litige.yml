@@ -1,0 +1,119 @@
+name: Litige
+description: Pour réception des situations de litige.
+title: "[DATE]: "
+projects: ["Litiges"]
+body:
+  - type: input
+    id: numero
+    attributes:
+      label: Numéro de dossier
+      description: Date de réception en format AAAA-MM-JJ, initiales de la personne ressource, rôle de la personne, nom de famille et initiale du prénom de la personne mise en cause, numéro
+      placeholder: AAAA-MM-JJ_PR_CEMens_seigneJ_01
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Date de réception du litige
+      placeholder: ex. AAAA-MM-JJ
+    validations:
+      required: true
+      
+  - type: input
+    id: plaignant-e
+    attributes:
+      label: Nom et code étudiant de la personne plaignante
+      placeholder: ex. Dorothée Tudiante (5318008)
+    validations:
+      required: true
+
+  - type: input
+    id: mis-en-cause
+    attributes:
+      label: Nom de la personne mise en cause
+      placeholder: ex. Jean Seigne
+    validations:
+      required: true
+
+  - type: dropdown
+    id: poste
+    attributes:
+      label: Poste de la personne mise en cause
+      multiple: false
+      options:
+        - Enseignant·e
+        - Employé·e du CÉGEP
+        - Service du CÉGEP
+        - Étudiant·e
+        - Employé·e de l'AGECEM
+        - Organisme étudiant
+        - Instance de l'AGECEM
+
+  - type: dropdown
+    id: departement
+    attributes:
+      label: Département scolaire
+      multiple: false
+      options:
+        - Administration et techniques administratives
+        - Anthropologie
+        - Arts plastiques
+        - Biologie
+        - Chimie
+        - Cinéma et communication
+        - Cours multidisciplinaires
+        - Denturologie
+        - Économie
+        - Éducation à l'enfance
+        - Éducation physique
+        - Électronique
+        - Éducation spécialisée
+        - Géographie
+        - Géologie et physique
+        - Histoire
+        - Histoire de l'art
+        - Hygiène dentaire
+        - Informatique
+        - Langues
+        - Littérature et français
+        - Mathématiques
+        - Multimédia
+        - Nutrition
+        - Radiodiagnostic
+        - Optique et lunetterie
+        - Philosophie
+        - Politique
+        - Prothèses dentaires
+        - Psychologie
+        - Sciences graphiques
+        - Sociologie
+        - Soins infirmiers
+
+  - type: textarea
+    id: evenements
+    attributes:
+      label: Description des événements
+    validations:
+      required: true
+
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Conséquences ou impacts sur la personne plaignante
+    validations:
+      required: true
+
+  - type: textarea
+    id: arrangements
+    attributes:
+      label: Arrangements attendus par la personne plaignante
+    validations:
+      required: true
+
+  - type: textarea
+    id: temoins
+    attributes:
+      label: Identification des témoins
+    validations:
+      required: true
